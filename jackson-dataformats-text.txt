@@ -1,0 +1,119 @@
+Project: jackson-datatypes-text
+Modules:
+  jackson-dataformat-csv
+  jackson-dataformat-properties (since 2.8)
+  jackson-dataformat-toml (since 2.13)
+  jackson-dataformat-yaml
+
+Active Maintainers:
+
+* Jonas Konrad (@yawkat): author of TOML module
+* Tatu Saloranta, tatu.saloranta@iki.fi: author of CSV, Properties and YAML modules
+
+------------------------------------------------------------------------
+=== Releases ===
+------------------------------------------------------------------------
+
+2.21.0 (not yet released)
+
+#10: (csv) Missing `null` writes when writing `Object[]` values
+ (reported by @georgewfraser)
+ (fix by @cowtowncoder, w/ Claude code)
+#154: (yaml) YAML file with no content throws `MismatchedInputException`
+  when binding to Object type (POJO etc)
+ (reported by Sergio D)
+ (fix by @cowtowncoder, w/ Claude code)
+
+2.20.1 (30-Oct-2025)
+
+No changes since 2.20.0
+
+2.20.0 (28-Aug-2025)
+
+#497: (csv, toml, yaml): `UTF8Reader` throws "Need to move partially decoded character;
+  buffer not modifiable" when read only one chinese char
+ NOTE: csv part fixed in 2.19.0, toml and yaml in 2.20.0
+ (reported by @mrtaolili)
+#564: (csv) `CsvParser.getNumberValue()`, related, do not throw exception
+ for non-numeric tokens
+- Generate SBOMs [JSTEP-14]
+
+2.19.4 (29-Oct-2025)
+2.19.3 (29-Oct-2025)
+2.19.2 (18-Jul-2025)
+2.19.1 (13-Jun-2025)
+
+No changes since 2.19.0
+
+2.19.0 (24-Apr-2025)
+
+#31: (csv) Header names seem to be trimmed
+ (reported by Robert D)
+#502: (yaml) Add an optional extended parser subclass (`YAMLAnchorReplayingFactory`)
+  able to inline anchors
+ (contributed by Heiko B)
+#523: JSTEP-10: Unify testing structure/tools
+ (contributed by Joo-Hyuk K)
+#537: (yaml) Snakeyaml 2.4
+ (contributed by @pjfanning)
+#554: (csv) Enforce, document thread-safety of `CsvSchema`
+ (requested by Gili T)
+
+2.18.5 (27-Oct-2025)
+2.18.4 (06-May-2025)
+2.18.3 (28-Feb-2025)
+2.18.2 (27-Nov-2024)
+
+No changes since 2.18.1
+
+2.18.1 (28-Oct-2024)
+
+#499: (yaml) SnakeYAML upgrade to 2.3
+ (contributed by @pjfanning)
+
+2.18.0 (26-Sep-2024)
+
+#442: (csv) Allow use of "value decorators" (like `[` and `]` for arrays)
+  for reading `CsvSchema` columns
+#468: (csv) Remove synchronization from `CsvMapper`
+ (contributed by @pjfanning)
+#469: (csv) Allow CSV to differentiate between `null` and empty
+  fields (foo,,bar vs. foo,"",bar)
+ (contributed by David P)
+#482: (yaml) Allow passing `ParserImpl` by a subclass or overwrite the events
+ (contributed by Heiko B)
+#483: (csv) Incorrect location of CSV errors
+ (reported by @RafeArnold)
+#485: (csv) CSVDecoder: No Long and Int out of range exceptions
+ (reported by Burdyug P)
+#495: (csv) Support use of `CsvValueDecorator` for writing CSV column values
+
+2.17.3 (01-Nov-2024)
+
+#499: (yaml) SnakeYAML upgrade to 2.3
+ (contributed by @pjfanning)
+
+2.17.2 (05-Jul-2024)
+
+#481: (csv) Fix issue in `setSchema()`
+ (contributed by @pjfanning)
+
+2.17.1 (04-May-2024)
+
+No changes since 2.17.0
+
+2.17.0 (12-Mar-2024)
+
+#45: (csv) Allow skipping ending line break
+  (`CsvGenerator.Feature.WRITE_LINEFEED_AFTER_LAST_ROW`)
+ (proposed by Mathieu L)
+#454: (yaml) Unexpected `NumberFormatException` in `YAMLParser`
+ (fix contributed by Arthur C)
+#456: (yaml) Support max Read/Write nesting depth limits (`StreamReadConstraints`/
+  `StreamWriteConstraints`) for YAML
+#465: (yaml) YAML: consider starting `#` and ending `:` as quotable characters
+ (contributed by Michael E)
+
+2.16.2 (09-Mar-2024)
+
+No changes since 2.16.1
