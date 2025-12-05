@@ -1,0 +1,39 @@
+version 2.2.0 Latest
+What's Changed
+Dom4j version 2.2.0 requires Java 11 or higher. The reason is the migration from JavaEE to JakartaEE, which requires Java 11.
+Dom4j 2.1.x remains compatible with Java 8.
+
+Migrate from JavaEE to JakartaEE by @dskilesdf in #186
+Improves multiple threads parsing efficiency by @qingzhongli in #57
+Fixed #120 by adding AutoClosable by @reinhapa in #160
+Implementation and tests for ordering of element attributes by @PAX523 in #69
+Use Gradle features/capabilities to model optional dependencies by @halfninja in #116
+Don't skip empty comments by @FilipJirsak in #80
+New Contributors
+@qingzhongli made their first contribution in #57
+@PAX523 made their first contribution in #69
+@halfninja made their first contribution in #116
+@dskilesdf made their first contribution in #186
+
+version 2.1.5
+What's Changed
+Bump gradle from 6.3 to 8.13 (fixes #187) by @reinhapa in #188
+Remove unnecessary constant conditional by @ecki in #174
+Remove misleading no-op lines incorrectly trying to disable external entities by @chadlwilson in #173
+New Contributors
+@ecki made their first contribution in #174
+@chadlwilson made their first contribution in #173
+
+version-2.1.4
+What's Changed
+updated pull-parser version by @jayknoxqu in #129
+Reuse the writeAttribute method in writeAttributes. by @Ekryd in #134
+support build on OS with non-UTF8 as default charset by @qxo in #96
+Gradle: add an automatic module name (fixes #67) by @carlosame in #84
+Use Correct License Name "Plexus" by @tisoft in #98
+New Contributors
+@jayknoxqu made their first contribution in #129
+@Ekryd made their first contribution in #134
+@qxo made their first contribution in #96
+@carlosame made their first contribution in #84
+@tisoft made their first contribution in #98
