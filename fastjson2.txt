@@ -1,0 +1,463 @@
+Fastjson 2.0.57版本发布
+这又是一个定期维护的功能增强BUG FIX版本，大家按需升级。
+
+Issues
+提升了序列化Double和忽略字段的性能
+修复单引号反序列化时不支持忽略大小写匹配的问题 #3381
+修复UseBigDecimalForDoubles解析浮点数结果不对的问题 #3382
+JSONArray/JSONObject增加getLocalDate/getLocalDateTime系列方法 #3337
+修复序列化Kotlin类忽略private field的问题 #3287
+修复某些场景toJSON/toJavaObject缺失字段的问题 #2227
+修复反序列化java.util.SubList报错的问题 #3364
+修复SeeAlso父类是接口反序列化报错的问题 #3357 #3440
+修复反序列化record不支持alternateNames的问题 #3351
+修复2.0.56引入的字段多导致jit报错的问题 #3367
+修复无上海时区环境报错的问题 #3450
+修复2.0.56引入的非规范Double.NaN序列化报错的问题 #3449
+修复某些场景不支持注释的问题 #3446
+修复多层List字段序列化报错的问题 #3444 #3433
+修复2.0.54引入的不匹配类型反序列化String结果不对的问题 #3438
+兼容fastjson 1.x，序列化忽略ClassLoader类型字段
+修复非当前ClassLoader类型toJavaObject导致ClassNotFound的问题 #3420
+修复输入类型为Object.class时，reference解析不生效的问题 #3452
+MAVEN依赖配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.57</version>
+</dependency>
+android5针对优化版本
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.57.android5</version>
+</dependency>
+android8针对优化版本
+这个版本支持java.time和Optional
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.57.android8</version>
+</dependency>
+1.x 兼容版本
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>2.0.57</version>
+</dependency>
+Spring 5 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring5</artifactId>
+    <version>2.0.57</version>
+</dependency>
+Spring 6 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring6</artifactId>
+    <version>2.0.57</version>
+</dependency>
+3. 相关链接
+FASTJSON 1.x用户升级指南 https://github.com/alibaba/fastjson2/wiki/fastjson_1_upgrade_cn
+相关issues https://github.com/alibaba/fastjson2/milestone/57
+代码tag https://github.com/alibaba/fastjson2/tree/2.0.57
+Maven下载 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.57/
+Android5特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.57.android5/
+Android8特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.57.android8/
+1.x兼容版本 https://repo1.maven.org/maven2/com/alibaba/fastjson/2.0.57/
+性能测试报告 https://github.com/alibaba/fastjson2/blob/main/docs/benchmark/benchmark_2.0.57.md
+
+fastjson 2.0.56版本发布，性能进一步提升
+这个版本进一步提升了性能，并且修复了2.0.54发布以来用户反馈的BUG。
+
+Issues
+修复JSONReaderJSONB未实现readArray方法的问题 #3332
+修复字符串中有@type且位置不在json串开始位置时和fastjson 1.x行为不一致的问题 #3284
+新增加API支持JSON::configEnumAsJavaBean #3286
+增强对反序列化对单元素数组的支持，和fastjson 1.x行为一致 #3276
+增强对kotlin的支持 #3288
+增加对单引号boolean的支持 #3283
+增加对enum上的Jackson JsonProperty配置的支持 #2804
+增强对parseLong报错的信息 #2749
+增加JSONReader.Feature.DisableReferenceDetect，并且自动识别不合法的reference path #3347
+新增加JSONField.contentAs配置，并且兼容Jackson JsonSerialize.contentAs #3335
+MAVEN依赖配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.56</version>
+</dependency>
+android5针对优化版本
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.56.android5</version>
+</dependency>
+android8针对优化版本
+这个版本支持java.time和Optional
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.56.android8</version>
+</dependency>
+1.x 兼容版本
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>2.0.56</version>
+</dependency>
+Spring 5 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring5</artifactId>
+    <version>2.0.56</version>
+</dependency>
+Spring 6 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring6</artifactId>
+    <version>2.0.56</version>
+</dependency>
+3. 相关链接
+FASTJSON 1.x用户升级指南 https://github.com/alibaba/fastjson2/wiki/fastjson_1_upgrade_cn
+相关issues https://github.com/alibaba/fastjson2/milestone/56
+代码tag https://github.com/alibaba/fastjson2/tree/2.0.56
+Maven下载 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.56/
+Android5特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.56.android5/
+Android8特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.56.android8/
+1.x兼容版本 https://repo1.maven.org/maven2/com/alibaba/fastjson/2.0.56/
+性能测试报告 https://github.com/alibaba/fastjson2/blob/main/docs/benchmark/benchmark_2.0.56.md
+
+fastjson 2.0.54版本发布，性能进一步提升
+这又是一个性能优化Bug修复的版本更新版本，大家按需升级。
+
+1. 性能优化
+这个版本的性能优化包括：
+
+1.1 使用SWAR(SIMD Within A Register)技巧来优化序列化字符串的性能
+序列化时，写字符串检测是否存在特别字符是一个性能关键点，这个版本使用SWAR(SIMD Within A Register)的技巧来做快速检测。如下
+
+package com.alibaba.fastjson2;
+class JSONWriterUTF8 {
+    protected final long byteVectorQuote;
+
+   JSONWriterUTF8(Context ctx) {
+        // " -> 0x22, ' -> 0x27
+        this.byteVectorQuote = this.useSingleQuote ? 0x2727_2727_2727_2727L : 0x2222_2222_2222_2222L;
+    }
+
+    public void writeStringLatin1(byte[] value) {
+        final long vecQuote = this.byteVectorQuote;
+        int i = 0;
+        final int upperBound = (value.length - i) & ~7;
+        // 这里一次检测8个byte是否存在特别字符
+        for (; i < upperBound; i += 8) {
+            if (containsEscaped(IOUtils.getLongLittleEndian(value, i), vecQuote)) {
+                break;
+            }
+        }
+        // ...
+    }
+
+    static boolean containsEscaped(long v, long quote) {
+        /*
+          for (int i = 0; i < 8; ++i) {
+            byte c = (byte) data;
+            if (c == quote || c == '\\' || c < ' ') {
+                return true;
+            }
+            data >>>= 8;
+          }
+          return false;
+         */
+        long x22 = v ^ quote; // " -> 0x22, ' -> 0x27
+        long x5c = v ^ 0x5c5c5c5c5c5c5c5cL;
+
+        x22 = (x22 - 0x0101010101010101L) & ~x22;
+        x5c = (x5c - 0x0101010101010101L) & ~x5c;
+
+        return ((x22 | x5c | (0x7F7F_7F7F_7F7F_7F7FL - v + 0x1010_1010_1010_1010L) | v) & 0x8080808080808080L) != 0;
+    }
+}
+https://github.com/alibaba/fastjson2/blob/2.0.54/core/src/main/java/com/alibaba/fastjson2/JSONWriterUTF8.java#L484
+
+1.2 优化在JDK 16+的readString性能
+在JDK 16+的版本下，使用StringLatin1.indexOfChar方法加速扫描特殊字符，优化readString的性能。这个算法来自 wycst 的贡献。
+
+class JSONReaderASCII {
+    static final int ESCAPE_INDEX_NOT_SET = -2;
+
+    protected int nextEscapeIndex = ESCAPE_INDEX_NOT_SET;
+
+    public String readString() {
+            int slashIndex = nextEscapeIndex;
+            if (slashIndex == ESCAPE_INDEX_NOT_SET || (slashIndex != -1 && slashIndex < offset)) {
+                nextEscapeIndex = slashIndex = IOUtils.indexOfChar(bytes, '\\', offset, end);
+            }
+            if (slashIndex == -1 || slashIndex > index) {
+                valueLength = index - offset;
+                offset = index;
+           // ...
+    }
+}
+https://github.com/alibaba/fastjson2/blob/2.0.54/core/src/main/java/com/alibaba/fastjson2/JSONReaderASCII.java#L1445
+
+获取StringLatin1.IndexOfChar MethodHandle的代码 https://github.com/alibaba/fastjson2/blob/2.0.54/core/src/main/java/com/alibaba/fastjson2/util/JDKUtils.java#L342
+1.3 int/long/float/double的读取写性能
+优化的技巧是一次性读取两个数字，如下:
+
+package com.alibaba.fastjson2;
+
+class JSONReaderUTF8 {
+    public final int readInt32Value() {
+       // ...
+        while (inRange
+                && offset + 1 < end
+                && (digit = IOUtils.digit2(bytes, offset)) != -1
+        ) {
+            // max digits is 19, no need to check inRange (result == MULT_MIN_100 && digit <= (MULT_MIN_100 * 100 - limit))
+            if (inRange = (result > INT_32_MULT_MIN_100)) {
+                result = result * 100 - digit;
+                offset += 2;
+            }
+        }
+    }
+}
+package com.alibaba.fastjson2.util;
+class IOUtils {
+    public static int digit2(byte[] bytes, int off) {
+        short x = UNSAFE.getShort(bytes, ARRAY_BYTE_BASE_OFFSET + off);
+        if (BIG_ENDIAN) {
+            x = Short.reverseBytes(x);
+        }
+        int d;
+        if ((((x & 0xF0F0) - 0x3030) | (((d = x & 0x0F0F) + 0x0606) & 0xF0F0)) != 0
+        ) {
+            return -1;
+        }
+        return ((d & 0xF) << 3) + ((d & 0xF) << 1)  // (d & 0xF) * 10
+                + (d >> 8);
+    }
+}
+https://github.com/alibaba/fastjson2/blob/2.0.54/core/src/main/java/com/alibaba/fastjson2/JSONReaderUTF8.java#L3506
+
+这个优化最初灵感源泉来自 https://github.com/wycst/wast 的 io.github.wycst.wast.json.JSONTypeDeserializer.NumberImpl#deserializeInteger所采用的算法，然后做了进一步的改进。
+
+2. Issues
+修复toJSONString实际可用空间小于预设的问题 #255
+格式化输出支持使用空格代替Tab，新增两个JSONWriter.Feature为PrettyFormatWith2Space和PrettyFormatWith4Space
+修复非法输入缺少第一个花括号{不报错的问题 #2592
+增强识别枚举，原来不能识别toString的结果，新增识别toString的结果。 #2820
+JSONObject.to 支持Void.class和void.class返回null #2879
+修复CSVWriter写入CSV数据超过 65536 个字节时报错 #2988
+修复SeeAlso类型父类是Abstract类型时JVM Crash的问题 #2987
+修复初始化JSONFactory某些场景会导致循环依赖导致死锁的问题 #2994
+修复JSON.toJSON方法行为和JSON.toJSONString不一致的问题 #2981
+增强对注释的支持 #2983
+修复某些场景JSONWriter.Feature.WriteNulls导致Long/Double序列化结果为Null的问题 #3049
+修复toJavaObject方法不能识别早期时间毫秒到LocalDateTime的转换问题 #3091
+修复反序列化private Class结果和toJavaObject方法结果不一致的问题 #3134
+增强fastjson 1.x的兼容性 #3208 #2739 # 3144 #3157
+增强对Record的支持 #3090
+JSONPath支持使用path设置List中的对象 #3125
+修复private Boolean类型字段使用valueFilter报错的问题 #3076
+修复JDK 9+ writeStringEscaped某些场景数组越界报错 #3209
+增加对Key为Map类型的反序列化支持 #3214
+JSON.parseObject方法在某些情况下反序列化编码出错的问题 #3223 #3219
+支持修改useGsonAnnotation 配置 #3258
+fastjson2缺省是能识别Gson的Annotation的，这个可以通过接口或者JVM启动参数关闭
+import com.alibaba.fastjson2.JSONFactory;
+
+// 手工关闭
+JSONFactory.setUseGsonAnnotation(false);
+也支持通过JVM启动参数关闭
+
+-Dfastjson2.useGsonAnnotation=false
+修复错误格式没有及时报错的问题 #3260
+public首字母大写的字段,序列化重复key生成 #3220
+MAVEN依赖配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.54</version>
+</dependency>
+android5针对优化版本
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.54.android5</version>
+</dependency>
+android8针对优化版本
+这个版本支持java.time和Optional
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.54.android8</version>
+</dependency>
+1.x 兼容版本
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>2.0.54</version>
+</dependency>
+Spring 5 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring5</artifactId>
+    <version>2.0.54</version>
+</dependency>
+Spring 6 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring6</artifactId>
+    <version>2.0.54</version>
+</dependency>
+3. 相关链接
+FASTJSON 1.x用户升级指南 https://github.com/alibaba/fastjson2/wiki/fastjson_1_upgrade_cn
+相关issues https://github.com/alibaba/fastjson2/milestone/54
+代码tag https://github.com/alibaba/fastjson2/tree/2.0.54
+Maven下载 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.54/
+Android5特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.54.android5/
+Android8特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.54.android8/
+1.x兼容版本 https://repo1.maven.org/maven2/com/alibaba/fastjson/2.0.54/
+性能测试报告 https://github.com/alibaba/fastjson2/blob/main/docs/benchmark/benchmark_2.0.54.md
+
+fastjson 2.0.53版本发布
+这又是一个月度更新版本，大家按需升级。
+
+Issues
+支持DisableSingleQuote配置 #2908
+修复配置JSONField#ignore之后导致死循环的问题 #2914
+反序列化java.util.Date类型支持HH:mm:ss格式输入 #2905
+修复兼容Jackson Annotation JsonUnwrapped某些场景不起作用的问题 #2846
+修复兼容Jackson Annotation JsonFormat某些场景不起作用的问题 #2836
+修复JSONB格式反序列化是忽略不存在Double/LocalDate字段报错的问题 #2823 #2907 #2902
+修复反序列化java.util.RandomAccessSubList类型报错的问题 #2851
+DefaultObjectWriterProvider和DefaultObjectReaderProvider提供clear方法 #2860
+修复某些场景反序列化LocalDateTime报错的问题 #2817
+修复CSVWriter在writeDecimal计算空间不对的问题 #2848
+修复JSONReader.Feature.UseBigDecimalForFloats行为不对的问题 #2866 #2867
+修复使用 fastjson1 的 JSON.toJSON() 方法，转换后的数据中存在 com.alibaba.fastjson2.JSONArray #2856
+修复与lombok AllArgsConstructor冲突的问题 #2901
+支持Clickhouse UnsignedLong类型序列化 #2958
+修复JSONB DUMP DECIMAL类型某些场景报错的问题 #2954
+支持更多场景JSONSchema #2931
+修复Long/Double字段配置JSONField#serializeFeatures WriteNulls不生效的问题 #2952
+修复某些场景配置JSONType#alphabetic=false不生效的问题 #2959
+2. MAVEN依赖配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.53</version>
+</dependency>
+android5针对优化版本
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.53.android5</version>
+</dependency>
+android8针对优化版本
+这个版本支持java.time和Optional
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.53.android8</version>
+</dependency>
+1.x 兼容版本
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>2.0.53</version>
+</dependency>
+Spring 5 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring5</artifactId>
+    <version>2.0.53</version>
+</dependency>
+Spring 6 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring6</artifactId>
+    <version>2.0.53</version>
+</dependency>
+3. 相关链接
+FASTJSON 1.x用户升级指南 https://github.com/alibaba/fastjson2/wiki/fastjson_1_upgrade_cn
+相关issues https://github.com/alibaba/fastjson2/milestone/53
+代码tag https://github.com/alibaba/fastjson2/tree/2.0.53
+Maven下载 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.53/
+Android5特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.53.android5/
+Android8特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.53.android8/
+1.x兼容版本 https://repo1.maven.org/maven2/com/alibaba/fastjson/2.0.53/
+性能测试报告 https://github.com/alibaba/fastjson2/blob/main/docs/benchmark/benchmark_2.0.53.md
+
+fastjson 2.0.52发布
+这又是一个月度例行发布的BUG FIX版本版本，大家按需升级。
+
+Issues
+修复属性为Collections.emptyList时出现的UnsupportedOperationException异常问题 #1835 #2691
+完善枚举属性setter方法匹配逻辑 #2680
+完善JSONPath的set方法跳过null #2656
+修复@JSONType同时指定WriteClassName与NotWriteRootClassName依然输出根类名问题 #2662
+修复ObjectReaderImplList与ObjectReaderImplMapTyped的createInstance出现的类型转换异常问题 #2665
+完善引用支持@符号 #2671
+调整最大EXP至2047，以支持更大数据 #2672
+完善FieldReader对Object属性的支持 #2673
+修复带有Filter时出现的序列化冒号缺失问题 #2678
+调整ObjectReaderImplEnum数值读取判断逻辑为JSONReader.toInt方法 #2682
+完善TypeUtils.cast方法对枚举的支持 #2726 #2688
+完善Fastjson1对Map的兼容性 #2693
+修复List属性时在指定ReferenceDetection序列化名称缺失问题 #2712
+新增支持dd-MM-yyyy HH:mm:ss日期格式 #2757
+完善readNumber0方法对后缀B,S或L的小数读取支持 #2768
+修复@JSONField对boolean属性支持 #2795
+完善JSONWriter.getPath对Map类型的支持 #2590
+完善getInteger, getBigInteger与getBigDecimal对boolean类型的支持 #2745 #2746
+新增parseObject(String text, Type type, JSONReader.Context context)方法 #2774
+JSONType新增支持RootName和arrayToMap配置 https://github.com/alibaba/fastjson2/wiki/array_to_map_cn
+2. MAVEN依赖配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.52</version>
+</dependency>
+android5针对优化版本
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.52.android5</version>
+</dependency>
+android8针对优化版本
+这个版本支持java.time和Optional
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2</artifactId>
+    <version>2.0.52.android8</version>
+</dependency>
+1.x 兼容版本
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>2.0.52</version>
+</dependency>
+Spring 5 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring5</artifactId>
+    <version>2.0.52</version>
+</dependency>
+Spring 6 extension配置
+<dependency>
+    <groupId>com.alibaba.fastjson2</groupId>
+    <artifactId>fastjson2-extension-spring6</artifactId>
+    <version>2.0.52</version>
+</dependency>
+3. 相关链接
+FASTJSON 1.x用户升级指南 https://github.com/alibaba/fastjson2/wiki/fastjson_1_upgrade_cn
+相关issues https://github.com/alibaba/fastjson2/milestone/52
+代码tag https://github.com/alibaba/fastjson2/tree/2.0.52
+Maven下载 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.52/
+Android5特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.52.android5/
+Android8特别优化版本 https://repo1.maven.org/maven2/com/alibaba/fastjson2/fastjson2/2.0.52.android8/
+1.x兼容版本 https://repo1.maven.org/maven2/com/alibaba/fastjson/2.0.52/
+性能测试报告 https://github.com/alibaba/fastjson2/blob/main/docs/benchmark/benchmark_2.0.52.md
