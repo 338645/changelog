@@ -1,0 +1,129 @@
+1.12.0 (2025-09-11)
+Bug Fixes
+adding build artifacts (9ec86de)
+dont add dist on release (a2edc36)
+fetch-adapter: set correct Content-Type for Node FormData (#6998) (a9f47af)
+node: enforce maxContentLength for data: URLs (#7011) (945435f)
+package exports (#5627) (aa78ac2)
+params: removing '[' and ']' from URL encode exclude characters (#3316) (#5715) (6d84189)
+release pr run (fd7f404)
+types: change the type guard on isCancel (#5595) (0dbb7fd)
+Features
+adapter: surface low‑level network error details; attach original error via cause (#6982) (78b290c)
+fetch: add fetch, Request, Response env config variables for the adapter; (#7003) (c959ff2)
+support reviver on JSON.parse (#5926) (2a97634), closes #5924
+types: extend AxiosResponse interface to include custom headers type (#6782) (7960d34)
+Contributors to this release
+avatar Willian Agostini
+avatar Dmitriy Mozgovoy
+avatar khani
+avatar Ameer Assadi
+avatar Emiedonmokumo Dick-Boro
+avatar Zeroday BYTE
+avatar Jason Saayman
+avatar 최예찬
+avatar Gligor Kotushevski
+avatar Aleksandar Dimitrov
+1.11.0 (2025-07-22)
+Bug Fixes
+form-data npm pakcage (#6970) (e72c193)
+prevent RangeError when using large Buffers (#6961) (a2214ca)
+types: resolve type discrepancies between ESM and CJS TypeScript declaration files (#6956) (8517aa1)
+Contributors to this release
+avatar izzy goldman
+avatar Manish Sahani
+avatar Noritaka Kobayashi
+avatar James Nail
+avatar Tejaswi1305
+1.10.0 (2025-06-14)
+Bug Fixes
+adapter: pass fetchOptions to fetch function (#6883) (0f50af8)
+form-data: convert boolean values to strings in FormData serialization (#6917) (5064b10)
+package: add module entry point for React Native; (#6933) (3d343b8)
+Features
+types: improved fetchOptions interface (#6867) (63f1fce)
+Contributors to this release
+avatar Dmitriy Mozgovoy
+avatar Noritaka Kobayashi
+avatar Dimitrios Lazanas
+avatar Adrian Knapp
+avatar Howie Zhao
+avatar Uhyeon Park
+avatar Sampo Silvennoinen
+1.9.0 (2025-04-24)
+Bug Fixes
+core: fix the Axios constructor implementation to treat the config argument as optional; (#6881) (6c5d4cd)
+fetch: fixed ERR_NETWORK mapping for Safari browsers; (#6767) (dfe8411)
+headers: allow iterable objects to be a data source for the set method; (#6873) (1b1f9cc)
+headers: fix getSetCookie by using 'get' method for caseless access; (#6874) (d4f7df4)
+headers: fixed support for setting multiple header values from an iterated source; (#6885) (f7a3b5e)
+http: send minimal end multipart boundary (#6661) (987d2e2)
+types: fix autocomplete for adapter config (#6855) (e61a893)
+Features
+AxiosHeaders: add getSetCookie method to retrieve set-cookie headers values (#5707) (80ea756)
+Contributors to this release
+avatar Dmitriy Mozgovoy
+avatar Jay
+avatar Willian Agostini
+avatar George Cheng
+avatar FatahChan
+avatar Ionuț G. Stan
+1.8.4 (2025-03-19)
+Bug Fixes
+buildFullPath: handle allowAbsoluteUrls: false without baseURL (#6833) (f10c2e0)
+Contributors to this release
+avatar Marc Hassan
+1.8.3 (2025-03-10)
+Bug Fixes
+add missing type for allowAbsoluteUrls (#6818) (10fa70e)
+xhr/fetch: pass allowAbsoluteUrls to buildFullPath in xhr and fetch adapters (#6814) (ec159e5)
+Contributors to this release
+avatar Ashcon Partovi
+avatar StefanBRas
+avatar Marc Hassan
+1.8.2 (2025-03-07)
+Bug Fixes
+http-adapter: add allowAbsoluteUrls to path building (#6810) (fb8eec2)
+Contributors to this release
+avatar Fasoro-Joseph Alexander
+1.8.1 (2025-02-26)
+Bug Fixes
+utils: move generateString to platform utils to avoid importing crypto module into client builds; (#6789) (36a5a62)
+Contributors to this release
+avatar Dmitriy Mozgovoy
+1.8.0 (2025-02-25)
+Bug Fixes
+examples: application crashed when navigating examples in browser (#5938) (1260ded)
+missing word in SUPPORT_QUESTION.yml (#6757) (1f890b1)
+utils: replace getRandomValues with crypto module (#6788) (23a25af)
+Features
+Add config for ignoring absolute URLs (#5902) (#6192) (32c7bcc)
+Reverts
+Revert "chore: expose fromDataToStream to be consumable (#6731)" (#6732) (1317261), closes #6731 #6732
+BREAKING CHANGES
+code relying on the above will now combine the URLs instead of prefer request URL
+
+feat: add config option for allowing absolute URLs
+
+fix: add default value for allowAbsoluteUrls in buildFullPath
+
+fix: typo in flow control when setting allowAbsoluteUrls
+
+Contributors to this release
+avatar Michael Toscano
+avatar Willian Agostini
+avatar Naron
+avatar shravan || श्रvan
+avatar Justin Dhillon
+avatar yionr
+avatar Shin'ya Ueoka
+avatar Dan Dascalescu
+avatar Nitin Ramnani
+avatar Shay Molcho
+avatar Jay
+fancy45daddy
+avatar Habip Akyol
+avatar Bailey Lissington
+avatar Bernardo da Eira Duarte
+avatar Shivam Batham
+avatar Lipin Kariappa
